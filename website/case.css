@@ -1,18 +1,10 @@
-@import url("base.css?v=20260616-10");
+@import url("components.css?v=20260616-11");
 
 :root {
   --section-y: clamp(64px, 7vw, 88px);
   --hero-y-start: clamp(72px, 9vw, 112px);
   --hero-y-end: 56px;
 }
-h1,
-h2,
-h3,
-h4,
-p {
-  margin-top: 0;
-}
-
 .case-hero,
 .page-hero {
   position: relative;
@@ -301,39 +293,6 @@ h2 {
   font-weight: 850;
 }
 
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-4);
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 10px 18px;
-  border: 1px solid var(--ink);
-  border-radius: var(--radius);
-  background: var(--ink);
-  color: #ffffff;
-  font-weight: 900;
-  transition:
-    transform 180ms ease,
-    background 180ms ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
-}
-
-.button.secondary {
-  border-color: var(--line);
-  background: #fff;
-  color: var(--ink);
-}
-
 .section {
   padding: var(--section-y) 0 var(--space-8);
   background: #ffffff;
@@ -432,10 +391,6 @@ li + li,
     --back-link-clearance: 32px;
   }
 
-  .nav-links {
-    display: none;
-  }
-
   .case-layout,
   .meta-grid,
   .section-head,
@@ -513,14 +468,6 @@ li + li,
 
   .paragraph-image {
     min-height: 180px;
-  }
-
-  .button-row {
-    flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
   }
 
 }

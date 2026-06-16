@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceDir = path.join(root, "src", "pages");
 const outputDir = path.join(root, "website");
-const assetVersion = "20260616-10";
+const assetVersion = "20260616-11";
 const siteUrl = "https://silas3737.github.io/portfolio";
 
 const pages = [
@@ -26,7 +26,7 @@ const pages = [
   {
     source: "about.html",
     output: "about.html",
-    stylesheet: "page.css",
+    stylesheet: "case.css",
     title: "关于侯泽航｜交互设计师作品集",
     description: "侯泽航的职业背景、核心能力和联系方式，聚焦复杂业务场景中的产品体验效率提升。",
     ogTitle: "关于侯泽航",
@@ -39,7 +39,7 @@ const pages = [
   {
     source: "cases/films-bond.html",
     output: "cases/films-bond.html",
-    stylesheet: "../page.css",
+    stylesheet: "../case.css",
     title: "影保宝制片管理系统｜侯泽航作品集",
     description: "影保宝制片管理系统案例详情，说明复杂影视制片流程数字化和拍摄计划制作效率提升。",
     ogTitle: "影保宝制片管理系统｜侯泽航作品集",
@@ -53,7 +53,7 @@ const pages = [
   {
     source: "cases/lowcode.html",
     output: "cases/lowcode.html",
-    stylesheet: "../page.css",
+    stylesheet: "../case.css",
     title: "矩阵低代码平台易学性提升｜侯泽航作品集",
     description: "矩阵低代码平台易学性提升案例详情，说明复杂 B 端工具的学习路径、上下文提示和操作路径优化。",
     ogTitle: "矩阵低代码平台易学性提升｜侯泽航作品集",
@@ -67,7 +67,7 @@ const pages = [
   {
     source: "cases/xingzhi.html",
     output: "cases/xingzhi.html",
-    stylesheet: "../page.css",
+    stylesheet: "../case.css",
     title: "行志 APP 改版｜侯泽航作品集",
     description: "行志 APP 改版案例详情，说明任务管理产品的体验诊断、流程重构和任务创建效率提升。",
     ogTitle: "行志 APP 改版｜侯泽航作品集",

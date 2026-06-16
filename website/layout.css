@@ -1,0 +1,38 @@
+@import url("base.css?v=20260616-11");
+
+@layer layout {
+  .site-header,
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, .86);
+    backdrop-filter: blur(18px);
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: min(var(--max), calc(100% - (var(--page-gutter) * 2)));
+    min-height: 64px;
+    margin: 0 auto;
+    gap: var(--space-4);
+  }
+
+  .wrap {
+    width: min(var(--max), calc(100% - (var(--page-gutter) * 2)));
+    margin: 0 auto;
+  }
+
+  section {
+    border-bottom: 1px solid var(--line);
+  }
+
+  @media (max-width: 640px) {
+    .nav {
+      grid-template-columns: 1fr;
+    }
+  }
+}

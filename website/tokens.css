@@ -44,28 +44,3 @@
     --decorator-gap: 30px;
   }
 }
-
-:focus-visible {
-  outline: 2px solid rgba(52, 198, 106, .55);
-  outline-offset: 3px;
-}
-
-.skip-link {
-  position: fixed;
-  top: var(--space-2);
-  left: var(--space-2);
-  z-index: 100;
-  padding: 8px 12px;
-  border: 1px solid var(--ink);
-  border-radius: var(--radius);
-  background: #fff;
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 900;
-  transform: translateY(-160%);
-  transition: transform 160ms ease;
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}

@@ -1,4 +1,4 @@
-@import url("base.css?v=20260616-10");
+@import url("components.css?v=20260616-11");
 
 #cases,
 #about,
@@ -149,8 +149,8 @@ h1 {
   border: 1px solid rgba(96, 116, 137, .22);
   border-radius: 10px;
   background:
-radial-gradient(circle at 76% 42%, rgba(255,255,255,.7), rgba(255,255,255,.28) 42%, rgba(255,255,255,0) 76%),
-linear-gradient(125deg, rgba(255,255,255,.42), rgba(255,255,255,.08));
+    radial-gradient(circle at 76% 42%, rgba(255,255,255,.7), rgba(255,255,255,.28) 42%, rgba(255,255,255,0) 76%),
+    linear-gradient(125deg, rgba(255,255,255,.42), rgba(255,255,255,.08));
   backdrop-filter: blur(10px);
 }
 
@@ -158,32 +158,32 @@ linear-gradient(125deg, rgba(255,255,255,.42), rgba(255,255,255,.08));
   grid-column: 2 / 8;
   grid-row: 2 / 4;
   background:
-radial-gradient(circle at 82% 42%, rgba(255,255,255,.72), rgba(255,255,255,.26) 44%, rgba(255,255,255,0) 78%),
-linear-gradient(120deg, rgba(126, 207, 187, .72) 0%, rgba(190, 225, 216, .36) 52%, rgba(255,255,255,.12) 100%);
+    radial-gradient(circle at 82% 42%, rgba(255,255,255,.72), rgba(255,255,255,.26) 44%, rgba(255,255,255,0) 78%),
+    linear-gradient(120deg, rgba(126, 207, 187, .72) 0%, rgba(190, 225, 216, .36) 52%, rgba(255,255,255,.12) 100%);
 }
 
 .artwork-card.blue {
   grid-column: 2 / 6;
   grid-row: 4 / 6;
   background:
-radial-gradient(circle at 78% 42%, rgba(255,255,255,.72), rgba(255,255,255,.28) 44%, rgba(255,255,255,0) 78%),
-linear-gradient(120deg, rgba(143, 181, 237, .66) 0%, rgba(202, 218, 245, .34) 54%, rgba(255,255,255,.12) 100%);
+    radial-gradient(circle at 78% 42%, rgba(255,255,255,.72), rgba(255,255,255,.28) 44%, rgba(255,255,255,0) 78%),
+    linear-gradient(120deg, rgba(143, 181, 237, .66) 0%, rgba(202, 218, 245, .34) 54%, rgba(255,255,255,.12) 100%);
 }
 
 .artwork-card.pink {
   grid-column: 8 / 11;
   grid-row: 2 / 5;
   background:
-radial-gradient(circle at 68% 38%, rgba(255,255,255,.7), rgba(255,255,255,.28) 44%, rgba(255,255,255,0) 78%),
-linear-gradient(120deg, rgba(233, 150, 136, .56) 0%, rgba(244, 207, 200, .3) 56%, rgba(255,255,255,.14) 100%);
+    radial-gradient(circle at 68% 38%, rgba(255,255,255,.7), rgba(255,255,255,.28) 44%, rgba(255,255,255,0) 78%),
+    linear-gradient(120deg, rgba(233, 150, 136, .56) 0%, rgba(244, 207, 200, .3) 56%, rgba(255,255,255,.14) 100%);
 }
 
 .artwork-card.gold {
   grid-column: 6 / 11;
   grid-row: 5 / 7;
   background:
-radial-gradient(circle at 78% 42%, rgba(255,255,255,.72), rgba(255,255,255,.28) 44%, rgba(255,255,255,0) 78%),
-linear-gradient(120deg, rgba(226, 186, 101, .58) 0%, rgba(241, 218, 168, .32) 54%, rgba(255,255,255,.14) 100%);
+    radial-gradient(circle at 78% 42%, rgba(255,255,255,.72), rgba(255,255,255,.28) 44%, rgba(255,255,255,0) 78%),
+    linear-gradient(120deg, rgba(226, 186, 101, .58) 0%, rgba(241, 218, 168, .32) 54%, rgba(255,255,255,.14) 100%);
 }
 
 .section-grid {

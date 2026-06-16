@@ -15,6 +15,16 @@
   --rose-soft: #fae9e5;
   --warning: #fff8e9;
   --warning-line: #ecd8a8;
+  --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-script: "Segoe Script", "Brush Script MT", cursive;
+  --text-body-size: 15px;
+  --text-body-line: 1.64;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
   --max: 1240px;
   --page-gutter: clamp(16px, 3.4vw, 48px);
   --grid-gap: clamp(16px, 2.2vw, 28px);

@@ -1,4 +1,4 @@
-@import url("components.css?v=20260617-02");
+@import url("components.css?v=20260617-09");
 
 :root {
   --section-y: clamp(64px, 7vw, 88px);
@@ -27,7 +27,7 @@
   background: rgba(255, 255, 255, .72);
   color: var(--ink);
   font-size: 13px;
-  font-weight: 900;
+  font-weight: var(--weight-black);
   backdrop-filter: blur(12px);
   transition:
     transform 180ms ease,
@@ -56,7 +56,7 @@
   background: var(--green-soft);
   color: var(--green-deep);
   font-size: 13px;
-  font-weight: 900;
+  font-weight: var(--weight-black);
 }
 
 h1 {
@@ -65,7 +65,7 @@ h1 {
   color: var(--ink);
   font-size: clamp(44px, 6.8vw, 96px);
   line-height: 1.02;
-  font-weight: 950;
+  font-weight: var(--weight-black);
   letter-spacing: 0;
 }
 
@@ -100,13 +100,13 @@ h1 {
   margin-bottom: 10px;
   color: #9a9a9a;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: var(--weight-black);
 }
 
 .meta strong {
   color: #3f3f3f;
   font-size: 15px;
-  font-weight: 850;
+  font-weight: var(--weight-extrabold);
 }
 
 .case-body {
@@ -136,7 +136,7 @@ h1 {
   padding: 10px 0;
   color: var(--muted);
   font-size: 14px;
-  font-weight: 850;
+  font-weight: var(--weight-extrabold);
   transition:
     color 180ms ease,
     transform 180ms ease;
@@ -177,7 +177,7 @@ h2 {
   color: var(--ink);
   font-size: clamp(30px, 3.6vw, 52px);
   line-height: 1.06;
-  font-weight: 950;
+  font-weight: var(--weight-black);
 }
 
 .section-head h2 {
@@ -261,7 +261,7 @@ h2 {
   color: var(--ink);
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.18;
-  font-weight: 950;
+  font-weight: var(--weight-black);
 }
 
 .case-story-block p {
@@ -280,7 +280,7 @@ h2 {
   color: #4f5c66;
   background: #f8f7f3;
   text-align: center;
-  font-weight: 900;
+  font-weight: var(--weight-black);
 }
 
 .note {
@@ -290,7 +290,7 @@ h2 {
   border-radius: var(--radius);
   background: var(--warning);
   color: #7c5a10;
-  font-weight: 850;
+  font-weight: var(--weight-extrabold);
 }
 
 .section {
@@ -335,7 +335,7 @@ h2 {
   margin-bottom: 0;
   color: var(--ink);
   font-size: 20px;
-  font-weight: 950;
+  font-weight: var(--weight-black);
 }
 
 .about-detail-row > div,
@@ -352,7 +352,7 @@ h2 {
 
 .about-detail-row strong {
   color: var(--ink);
-  font-weight: 900;
+  font-weight: var(--weight-black);
 }
 
 ul,

@@ -234,46 +234,47 @@ h2 {
   color: var(--ink);
 }
 
-.project-table-wrap {
+.project-list {
   width: 100%;
   overflow-x: auto;
   border-top: 1px solid var(--line);
 }
 
-.project-table {
-  width: 100%;
+.project-list-head,
+.project-row {
+  display: grid;
+  grid-template-columns: 58px minmax(360px, 1fr) 118px 126px 270px;
+  align-items: center;
   min-width: 980px;
-  border-collapse: collapse;
-  table-layout: fixed;
 }
 
-.project-table th,
-.project-table td {
+.project-list-head > span,
+.project-row > span {
   padding: 17px 14px;
   border-bottom: 1px solid var(--line);
   text-align: left;
-  vertical-align: middle;
+  min-width: 0;
 }
 
-.project-table th {
+.project-list-head {
   color: #8a8a8a;
   font-size: 12px;
   font-weight: 720;
 }
 
-.project-table tbody tr {
+.project-row {
   cursor: pointer;
   transition:
     background 150ms ease,
     transform 150ms ease;
 }
 
-.project-table tbody tr:hover,
-.project-table tbody tr:focus-visible {
+.project-row:hover,
+.project-row:focus-visible {
   background: #faf9f7;
 }
 
-.project-table tbody tr:focus-visible {
+.project-row:focus-visible {
   outline: 2px solid rgba(52, 198, 106, .45);
   outline-offset: -2px;
 }
@@ -341,7 +342,8 @@ h2 {
   line-height: 1.35;
 }
 
-.project-name:hover {
+.project-row:hover .project-name,
+.project-row:focus-visible .project-name {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -601,41 +603,29 @@ h2 {
     min-height: 310px;
   }
 
-  .project-table-wrap {
-    overflow-x: visible;
-  }
-
-  .project-table,
-  .project-table tbody,
-  .project-table tr,
-  .project-table td {
-    display: block;
-    width: 100%;
-    min-width: 0;
-  }
-
-  .project-table {
-    min-width: 0;
-  }
-
-  .project-table thead {
+  .project-list-head {
     display: none;
   }
 
-  .project-table tbody tr {
+  .project-list {
+    overflow-x: visible;
+  }
+
+  .project-row {
     display: grid;
     grid-template-columns: 40px minmax(0, 1fr);
     gap: var(--space-2) var(--space-3);
+    min-width: 0;
     padding: var(--space-4) 0;
     border-bottom: 1px solid var(--line);
   }
 
-  .project-table td {
+  .project-row > span {
     padding: 0;
     border-bottom: 0;
   }
 
-  .project-table .col-no {
+  .project-row .col-no {
     grid-row: 1 / span 4;
   }
 
@@ -647,32 +637,32 @@ h2 {
     white-space: normal;
   }
 
-  .project-table .col-type,
-  .project-table .col-year,
-  .project-table .col-result {
+  .project-row .col-type,
+  .project-row .col-year,
+  .project-row .col-result {
     width: auto;
     grid-column: 2;
   }
 
-  .project-table .col-type::before,
-  .project-table .col-year::before,
-  .project-table .col-result::before {
+  .project-row .col-type::before,
+  .project-row .col-year::before,
+  .project-row .col-result::before {
     display: block;
     margin-bottom: 4px;
     color: #999;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
   }
 
-  .project-table .col-type::before {
+  .project-row .col-type::before {
     content: "类型";
   }
 
-  .project-table .col-year::before {
+  .project-row .col-year::before {
     content: "角色";
   }
 
-  .project-table .col-result::before {
+  .project-row .col-result::before {
     content: "结果";
   }
 

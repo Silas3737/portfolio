@@ -187,7 +187,7 @@ h1 {
 }
 
 .hero {
-  min-height: clamp(720px, 84vh, 880px);
+  min-height: clamp(670px, calc(84vh - 50px), 830px);
   background:
     radial-gradient(circle at 78% 76%, rgba(52, 198, 106, .08), transparent 23%),
     linear-gradient(180deg, #fff 0%, #fbfbfa 100%);
@@ -200,7 +200,8 @@ h1 {
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 650px;
+  grid-column: 1 / span 5;
+  max-width: 610px;
 }
 
 .hero-status {
@@ -227,9 +228,9 @@ h1 {
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 680px;
   margin-bottom: var(--space-4);
-  font-size: clamp(96px, 9.8vw, 154px);
+  font-size: clamp(84px, 8.6vw, 132px);
   line-height: .9;
   font-weight: 950;
 }
@@ -242,10 +243,10 @@ h1 {
   position: relative;
   width: fit-content;
   max-width: 100%;
-  margin: 0 0 var(--space-6);
+  margin: 0 0 var(--space-5);
   color: rgba(52, 198, 106, .86);
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: clamp(36px, 3.4vw, 56px);
+  font-size: clamp(30px, 2.8vw, 46px);
   line-height: 1;
   transform: rotate(-2deg);
   white-space: nowrap;
@@ -264,7 +265,7 @@ h1 {
 }
 
 .hero-tagline {
-  max-width: 600px;
+  max-width: 560px;
   margin: 0 0 clamp(48px, 5vw, 70px);
   color: var(--ink);
   font-size: clamp(42px, 3.45vw, 60px);
@@ -278,7 +279,7 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   gap: 0;
-  max-width: 640px;
+  max-width: 620px;
 }
 
 .hero-metric {
@@ -292,8 +293,10 @@ h1 {
 }
 
 .hero-metric strong {
-  display: block;
+  display: flex;
+  align-items: flex-start;
   margin-bottom: var(--space-2);
+  min-height: clamp(42px, 4.1vw, 70px);
   color: var(--ink);
   font-size: clamp(42px, 4.1vw, 70px);
   line-height: .96;
@@ -313,6 +316,7 @@ h1 {
 
 .hero-artwork {
   position: relative;
+  grid-column: 6 / -1;
   z-index: 1;
   min-height: clamp(560px, 48vw, 690px);
   pointer-events: none;
@@ -320,10 +324,13 @@ h1 {
 
 .hero-number {
   position: absolute;
-  inset: -2% -3% 0 -2%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   overflow: visible;
   opacity: .9;
+  transform: scale(.96);
+  transform-origin: center;
 }
 
 .number-line {

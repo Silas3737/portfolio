@@ -1,4 +1,32 @@
 (function () {
+  const pageNavLinks = Array.from(document.querySelectorAll(".nav-links a[href^='#']"));
+  const pageSections = pageNavLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  if (pageNavLinks.length && pageSections.length) {
+    const setActiveNavLink = (sectionId) => {
+      pageNavLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === `#${sectionId}`);
+      });
+    };
+
+    setActiveNavLink(pageSections[0].id);
+
+    if ("IntersectionObserver" in window) {
+      const pageNavObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setActiveNavLink(entry.target.id);
+          });
+        },
+        { rootMargin: "-36% 0px -52% 0px", threshold: 0.01 }
+      );
+
+      pageSections.forEach((section) => pageNavObserver.observe(section));
+    }
+  }
+
   const revealItems = Array.from(document.querySelectorAll(".reveal, .case-section, .case-story-block"));
 
   if (!("IntersectionObserver" in window)) {

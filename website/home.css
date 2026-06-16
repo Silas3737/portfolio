@@ -1,4 +1,4 @@
-@import url("components.css?v=20260616-11");
+@import url("components.css?v=20260617-02");
 
 #cases,
 #about,
@@ -246,12 +246,12 @@ h2 {
   grid-template-columns: 58px minmax(360px, 1fr) 118px 126px 270px;
   align-items: center;
   min-width: 980px;
+  border-bottom: 1px solid var(--line);
 }
 
 .project-list-head > span,
 .project-row > span {
   padding: 17px 14px;
-  border-bottom: 1px solid var(--line);
   text-align: left;
   min-width: 0;
 }

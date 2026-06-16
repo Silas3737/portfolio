@@ -1,5 +1,20 @@
 (function () {
-  const revealItems = Array.from(document.querySelectorAll(".reveal, .case-section, .paragraph-block"));
+  const projectRows = Array.from(document.querySelectorAll(".project-row[data-href]"));
+
+  projectRows.forEach((row) => {
+    row.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+      window.location.href = row.dataset.href;
+    });
+
+    row.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      window.location.href = row.dataset.href;
+    });
+  });
+
+  const revealItems = Array.from(document.querySelectorAll(".reveal, .case-section, .case-story-block"));
 
   if (!("IntersectionObserver" in window)) {
     revealItems.forEach((item) => item.classList.add("is-visible"));

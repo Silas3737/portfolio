@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceDir = path.join(root, "src", "pages");
 const outputDir = path.join(root, "website");
-const assetVersion = "20260617-03";
+const assetVersion = "20260617-04";
 const siteUrl = "https://silas3737.github.io/portfolio";
 
 const pages = [

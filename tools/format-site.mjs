@@ -8,6 +8,7 @@ const formattedExtensions = new Set([".css", ".html", ".js", ".json", ".md", ".y
 const formattedNames = new Set([".gitignore", ".gitattributes"]);
 const targetPaths = [
   ".github",
+  "src",
   "tools",
   "website",
   ".gitattributes",

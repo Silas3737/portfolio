@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "generate": "node tools/build-site.mjs",
     "format": "node tools/format-site.mjs",
     "check:format": "node tools/format-site.mjs --check",
     "check:html": "node tools/validate-html.mjs",
     "check:site": "node tools/check-site.mjs",
     "check": "npm run check:format && npm run check:html && npm run check:site",
-    "build": "npm run check"
+    "build": "npm run generate && npm run format && npm run check"
   }
 }

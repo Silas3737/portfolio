@@ -187,18 +187,20 @@ h1 {
 }
 
 .hero {
-  min-height: clamp(650px, 82vh, 860px);
+  min-height: clamp(720px, 84vh, 880px);
   background:
-    radial-gradient(circle at 74% 68%, rgba(52, 198, 106, .1), transparent 24%),
+    radial-gradient(circle at 78% 76%, rgba(52, 198, 106, .08), transparent 23%),
     linear-gradient(180deg, #fff 0%, #fbfbfa 100%);
 }
 
 .hero-inner {
-  padding: clamp(76px, 8vw, 108px) 0 clamp(72px, 7vw, 96px);
+  padding: clamp(78px, 8vw, 112px) 0 clamp(70px, 7vw, 92px);
 }
 
 .hero-copy {
-  max-width: 720px;
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
 }
 
 .hero-status {
@@ -211,9 +213,9 @@ h1 {
   border: 1px solid rgba(52, 198, 106, .24);
   border-radius: 999px;
   background: rgba(255, 255, 255, .62);
-  color: var(--ink);
-  font-size: 15px;
-  font-weight: 820;
+  color: var(--green);
+  font-size: 18px;
+  font-weight: 860;
 }
 
 .status-dot {
@@ -226,9 +228,9 @@ h1 {
 
 h1 {
   max-width: 760px;
-  margin-bottom: var(--space-3);
-  font-size: clamp(76px, 9.4vw, 150px);
-  line-height: .92;
+  margin-bottom: var(--space-4);
+  font-size: clamp(96px, 9.8vw, 154px);
+  line-height: .9;
   font-weight: 950;
 }
 
@@ -239,10 +241,11 @@ h1 {
 .hero-script {
   position: relative;
   width: fit-content;
-  margin: 0 0 var(--space-5);
+  max-width: 100%;
+  margin: 0 0 var(--space-6);
   color: rgba(52, 198, 106, .86);
   font-family: "Segoe Script", "Brush Script MT", cursive;
-  font-size: clamp(34px, 3.7vw, 58px);
+  font-size: clamp(36px, 3.4vw, 56px);
   line-height: 1;
   transform: rotate(-2deg);
   white-space: nowrap;
@@ -251,37 +254,40 @@ h1 {
 .hero-script::after {
   content: "";
   position: absolute;
-  left: 24%;
-  right: -14%;
-  bottom: -10px;
+  left: 8%;
+  right: 0;
+  bottom: -9px;
   height: 3px;
   border-radius: 999px;
-  background: rgba(52, 198, 106, .54);
+  background: rgba(52, 198, 106, .62);
   transform: skewX(-18deg);
 }
 
 .hero-tagline {
-  max-width: 620px;
-  margin: 0 0 clamp(42px, 5vw, 68px);
-  color: #687382;
-  font-size: clamp(28px, 2.7vw, 46px);
-  line-height: 1.25;
-  font-weight: 850;
+  max-width: 600px;
+  margin: 0 0 clamp(48px, 5vw, 70px);
+  color: var(--ink);
+  font-size: clamp(42px, 3.45vw, 60px);
+  line-height: 1.18;
+  font-weight: 920;
   letter-spacing: 0;
 }
 
 .hero-metrics {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
-  gap: clamp(28px, 3vw, 46px);
+  gap: 0;
+  max-width: 640px;
 }
 
 .hero-metric {
-  min-width: 128px;
+  min-width: 0;
+  padding-right: clamp(22px, 2.6vw, 42px);
 }
 
 .hero-metric + .hero-metric {
-  padding-left: clamp(28px, 3vw, 46px);
+  padding-left: clamp(30px, 3.1vw, 48px);
   border-left: 1px solid var(--line);
 }
 
@@ -289,46 +295,53 @@ h1 {
   display: block;
   margin-bottom: var(--space-2);
   color: var(--ink);
-  font-size: clamp(38px, 4.3vw, 68px);
+  font-size: clamp(42px, 4.1vw, 70px);
   line-height: .96;
   font-weight: 950;
+  white-space: nowrap;
+}
+
+.hero-metric:nth-child(3) strong {
+  font-size: clamp(34px, 3.1vw, 54px);
 }
 
 .hero-metric span {
   color: var(--ink);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 820;
 }
 
 .hero-artwork {
   position: relative;
-  min-height: clamp(460px, 45vw, 650px);
+  z-index: 1;
+  min-height: clamp(560px, 48vw, 690px);
+  pointer-events: none;
 }
 
 .hero-number {
   position: absolute;
-  inset: 0 -8% 0 -10%;
-  width: 116%;
+  inset: -2% -3% 0 -2%;
   height: 100%;
   overflow: visible;
+  opacity: .9;
 }
 
 .number-line {
   fill: none;
-  stroke: rgba(52, 198, 106, .36);
+  stroke: rgba(52, 198, 106, .42);
   stroke-width: 1.35;
   vector-effect: non-scaling-stroke;
 }
 
 .orbit-line {
   fill: none;
-  stroke: rgba(17, 28, 45, .2);
+  stroke: rgba(17, 28, 45, .16);
   stroke-width: 1.15;
   vector-effect: non-scaling-stroke;
 }
 
 .orbit-line.soft {
-  stroke: rgba(52, 198, 106, .16);
+  stroke: rgba(52, 198, 106, .18);
 }
 
 .orbit-dot-halo {
@@ -341,11 +354,11 @@ h1 {
 
 .hero-halftone {
   position: absolute;
-  left: 32%;
-  top: 24%;
-  width: 34%;
+  left: 35%;
+  top: 23%;
+  width: 40%;
   height: 48%;
-  opacity: .34;
+  opacity: .26;
   background-image: radial-gradient(rgba(52, 198, 106, .48) 1.2px, transparent 1.2px);
   background-size: 12px 12px;
   transform: rotate(-10deg);
@@ -354,13 +367,13 @@ h1 {
 
 .hero-glow {
   position: absolute;
-  left: 28%;
-  right: 20%;
-  bottom: 8%;
-  height: 38%;
+  left: 30%;
+  right: 12%;
+  bottom: 2%;
+  height: 44%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(52, 198, 106, .2), rgba(52, 198, 106, 0) 68%);
-  filter: blur(8px);
+  background: radial-gradient(circle, rgba(52, 198, 106, .18), rgba(52, 198, 106, 0) 68%);
+  filter: blur(10px);
 }
 
 .section-grid {
@@ -834,11 +847,12 @@ h2 {
   }
 
   .hero-tagline {
-    max-width: 580px;
+    max-width: 600px;
   }
 
   .hero-metrics {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .hero-artwork {
@@ -848,8 +862,8 @@ h2 {
   }
 
   .hero-number {
-    inset: 0 -6%;
-    width: 112%;
+    inset: 0 -6% 0 -6%;
+    width: auto;
   }
 }
 
@@ -892,6 +906,10 @@ h2 {
 
   .hero-metric strong {
     font-size: clamp(42px, 13vw, 58px);
+  }
+
+  .hero-metric:nth-child(3) strong {
+    font-size: clamp(36px, 10vw, 48px);
   }
 
   .hero-artwork {

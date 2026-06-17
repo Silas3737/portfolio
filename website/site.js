@@ -57,7 +57,10 @@
     };
 
     projectNodes.forEach((node) => {
-      node.querySelector(".project-node-trigger")?.addEventListener("click", () => setActiveProject(node));
+      node.addEventListener("click", (event) => {
+        if (event.target.closest(".project-action")) return;
+        setActiveProject(node);
+      });
     });
   }
 

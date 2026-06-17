@@ -427,6 +427,7 @@ h2 {
   background: rgba(255, 255, 255, .88);
   box-shadow: 0 12px 32px rgba(28, 41, 56, .04);
   backdrop-filter: blur(12px);
+  cursor: pointer;
   transition:
     border-color 180ms ease,
     background 180ms ease,
@@ -481,6 +482,7 @@ h2 {
   align-items: center;
   min-height: 24px;
   color: var(--ink);
+  cursor: pointer;
   font-size: var(--text-sm);
   font-weight: var(--weight-black);
 }

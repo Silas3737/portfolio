@@ -32,15 +32,20 @@
   if (projectShowcase) {
     const projectNodes = Array.from(projectShowcase.querySelectorAll(".project-node"));
     const resultSets = Array.from(projectShowcase.querySelectorAll(".project-result-set"));
-    const toneVars = {
-      green: ["#34c66a", "rgba(52, 198, 106, .1)"],
-      blue: ["#347ac6", "rgba(52, 122, 198, .1)"],
-      gold: ["#c69a34", "rgba(198, 154, 52, .12)"],
+
+    const readProjectTone = (tone) => {
+      const styles = getComputedStyle(projectShowcase);
+      const color = styles.getPropertyValue(`--project-${tone}`).trim();
+      const soft = styles.getPropertyValue(`--project-${tone}-soft`).trim();
+      return [
+        color || styles.getPropertyValue("--project-green").trim(),
+        soft || styles.getPropertyValue("--project-green-soft").trim(),
+      ];
     };
 
     const setActiveProject = (node) => {
       const project = node.dataset.project;
-      const [activeColor, activeSoft] = toneVars[node.dataset.tone] || toneVars.green;
+      const [activeColor, activeSoft] = readProjectTone(node.dataset.tone || "green");
 
       projectShowcase.style.setProperty("--project-active-color", activeColor);
       projectShowcase.style.setProperty("--project-active-soft", activeSoft);
@@ -48,7 +53,9 @@
       projectNodes.forEach((item) => {
         const isActive = item === node;
         item.classList.toggle("is-active", isActive);
-        item.querySelector(".project-node-trigger")?.setAttribute("aria-pressed", String(isActive));
+        item
+          .querySelectorAll(".project-node-trigger, .project-card-button")
+          .forEach((control) => control.setAttribute("aria-pressed", String(isActive)));
       });
 
       resultSets.forEach((set) => {
@@ -57,7 +64,8 @@
     };
 
     projectNodes.forEach((node) => {
-      node.addEventListener("click", (event) => {
+      node.querySelector(".project-node-trigger")?.addEventListener("click", () => setActiveProject(node));
+      node.querySelector(".project-map-card")?.addEventListener("click", (event) => {
         if (event.target.closest(".project-action")) return;
         setActiveProject(node);
       });

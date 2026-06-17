@@ -284,6 +284,12 @@ h2 {
   align-items: center;
 }
 
+.project-copy {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
 .thumb {
   position: relative;
   display: grid;
@@ -316,6 +322,7 @@ h2 {
 }
 
 .project-name {
+  display: block;
   color: var(--ink);
   font-weight: var(--weight-extrabold);
   line-height: 1.35;
@@ -328,7 +335,7 @@ h2 {
 }
 
 .project-desc {
-  margin-top: 3px;
+  display: block;
   color: #777;
   font-size: var(--text-xs);
   white-space: nowrap;

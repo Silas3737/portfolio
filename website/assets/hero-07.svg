@@ -1,0 +1,81 @@
+<svg width="1054" height="1009" viewBox="0 0 1054 1009" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glassFill" x1="140" y1="90" x2="930" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18" />
+      <stop offset="45%" stop-color="#F6FBF8" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#35D07F" stop-opacity="0.06" />
+    </linearGradient>
+
+    <linearGradient id="glassStroke" x1="120" y1="60" x2="980" y2="940" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B7E8C7" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#A6E1BC" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#8FD6AE" stop-opacity="0.78" />
+    </linearGradient>
+
+    <linearGradient id="sheen" x1="160" y1="110" x2="760" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28" />
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="orbitStroke" x1="40" y1="760" x2="980" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#BFC6C3" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#AEB6B2" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#BFC6C3" stop-opacity="0.14" />
+    </linearGradient>
+
+    <radialGradient id="greenGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(790 720) rotate(90) scale(240 240)">
+      <stop offset="0%" stop-color="#35D07F" stop-opacity="0.16" />
+      <stop offset="55%" stop-color="#35D07F" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#35D07F" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" />
+    </filter>
+
+    <mask id="zeroMask" maskUnits="userSpaceOnUse">
+      <rect x="105" y="55" width="435" height="855" rx="218" fill="white" />
+      <rect x="232" y="178" width="202" height="630" rx="101" fill="black" />
+    </mask>
+
+    <clipPath id="zeroClip">
+      <rect x="105" y="55" width="435" height="855" rx="218" />
+    </clipPath>
+
+    <clipPath id="sevenClip">
+      <path d="M567 86H977V182L657 909H496L847 182H567V86Z" />
+    </clipPath>
+  </defs>
+
+  <circle cx="790" cy="720" r="240" fill="url(#greenGlow)" filter="url(#softBlur)" />
+
+  <path d="M35 690 C120 790 300 730 470 660 C650 586 835 500 1000 446" stroke="url(#orbitStroke)" stroke-width="2.2" stroke-linecap="round" />
+
+  <g>
+    <rect x="105" y="55" width="435" height="855" rx="218" fill="url(#glassFill)" mask="url(#zeroMask)" />
+
+    <g mask="url(#zeroMask)" clip-path="url(#zeroClip)">
+      <path d="M138 118 C220 70 360 86 470 182 C392 188 312 238 228 360 C182 428 154 520 145 626 Z" fill="url(#sheen)" />
+    </g>
+
+    <rect x="105" y="55" width="435" height="855" rx="218" stroke="url(#glassStroke)" stroke-width="2.4" />
+
+    <rect x="232" y="178" width="202" height="630" rx="101" stroke="url(#glassStroke)" stroke-width="2" opacity="0.95" />
+  </g>
+
+  <g>
+    <path d="M567 86H977V182L657 909H496L847 182H567V86Z" fill="url(#glassFill)" />
+
+    <g clip-path="url(#sevenClip)">
+      <path d="M605 118 C740 90 870 120 950 182 C872 204 792 286 734 414 C690 508 650 636 606 766 Z" fill="url(#sheen)" />
+    </g>
+
+    <path d="M567 86H977V182L657 909H496L847 182H567V86Z" stroke="url(#glassStroke)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" />
+  </g>
+
+  <g>
+    <circle cx="1010" cy="505" r="21" fill="#35D07F" fill-opacity="0.16" />
+    <circle cx="1010" cy="505" r="10" fill="#35D07F" />
+  </g>
+</svg>

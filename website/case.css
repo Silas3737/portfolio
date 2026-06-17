@@ -1,4 +1,4 @@
-@import url("components.css?v=20260617-09");
+@import url("components.css?v=20260617-18");
 
 :root {
   --section-y: clamp(64px, 7vw, 88px);
@@ -26,7 +26,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, .72);
   color: var(--ink);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: var(--weight-black);
   backdrop-filter: blur(12px);
   transition:
@@ -55,7 +55,7 @@
   border-radius: 999px;
   background: var(--green-soft);
   color: var(--green-deep);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: var(--weight-black);
 }
 
@@ -63,7 +63,7 @@ h1 {
   max-width: 980px;
   margin-bottom: var(--space-3);
   color: var(--ink);
-  font-size: clamp(44px, 6.8vw, 96px);
+  font-size: var(--case-title);
   line-height: 1.02;
   font-weight: var(--weight-black);
   letter-spacing: 0;
@@ -74,7 +74,7 @@ h1 {
   max-width: 760px;
   margin-bottom: var(--space-5);
   color: var(--muted);
-  font-size: clamp(16px, 1.5vw, 20px);
+  font-size: var(--case-lead);
   line-height: 1.78;
 }
 
@@ -99,13 +99,13 @@ h1 {
   display: block;
   margin-bottom: 10px;
   color: #9a9a9a;
-  font-size: 14px;
+  font-size: var(--text-meta);
   font-weight: var(--weight-black);
 }
 
 .meta strong {
   color: #3f3f3f;
-  font-size: 15px;
+  font-size: var(--text-md);
   font-weight: var(--weight-extrabold);
 }
 
@@ -135,7 +135,7 @@ h1 {
   display: block;
   padding: 10px 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: var(--text-meta);
   font-weight: var(--weight-extrabold);
   transition:
     color 180ms ease,
@@ -175,14 +175,14 @@ h1 {
 h2 {
   margin-bottom: var(--space-2);
   color: var(--ink);
-  font-size: clamp(30px, 3.6vw, 52px);
+  font-size: var(--case-section-title);
   line-height: 1.06;
   font-weight: var(--weight-black);
 }
 
 .section-head h2 {
   max-width: 860px;
-  font-size: clamp(30px, 3.2vw, 44px);
+  font-size: var(--case-section-title-compact);
   line-height: 1.12;
 }
 
@@ -195,7 +195,7 @@ h2 {
   max-width: 840px;
   margin-bottom: var(--space-4);
   color: var(--muted);
-  font-size: 16px;
+  font-size: var(--text-lg);
 }
 
 .case-figure {
@@ -219,7 +219,7 @@ h2 {
   padding: 12px 16px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--text-sm);
 }
 
 .case-story-list,
@@ -259,7 +259,7 @@ h2 {
 .case-story-block h3 {
   margin-bottom: var(--space-1);
   color: var(--ink);
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: var(--case-story-title);
   line-height: 1.18;
   font-weight: var(--weight-black);
 }
@@ -334,7 +334,7 @@ h2 {
   grid-column: 1 / span 2;
   margin-bottom: 0;
   color: var(--ink);
-  font-size: 20px;
+  font-size: var(--text-xl);
   font-weight: var(--weight-black);
 }
 
@@ -449,11 +449,11 @@ li + li,
   }
 
   h1 {
-    font-size: clamp(38px, 13vw, 60px);
+    font-size: var(--case-title-mobile);
   }
 
   .section-head .about-summary-title {
-    font-size: clamp(19px, 5.4vw, 24px);
+    font-size: var(--about-title-mobile);
     line-height: 1.22;
   }
 

@@ -442,6 +442,13 @@
   font-weight: var(--weight-black);
 }
 
+.project-result-item.is-qualitative strong {
+  color: var(--ink);
+  font-size: var(--text-xl);
+  line-height: 1.2;
+  font-weight: var(--weight-black);
+}
+
 .project-result-item span span {
   display: block;
   margin-top: var(--space-1);

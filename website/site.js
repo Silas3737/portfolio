@@ -27,6 +27,40 @@
     }
   }
 
+  const projectShowcase = document.querySelector("[data-project-showcase]");
+
+  if (projectShowcase) {
+    const projectNodes = Array.from(projectShowcase.querySelectorAll(".project-node"));
+    const resultSets = Array.from(projectShowcase.querySelectorAll(".project-result-set"));
+    const toneVars = {
+      green: ["#34c66a", "rgba(52, 198, 106, .1)"],
+      blue: ["#347ac6", "rgba(52, 122, 198, .1)"],
+      gold: ["#c69a34", "rgba(198, 154, 52, .12)"],
+    };
+
+    const setActiveProject = (node) => {
+      const project = node.dataset.project;
+      const [activeColor, activeSoft] = toneVars[node.dataset.tone] || toneVars.green;
+
+      projectShowcase.style.setProperty("--project-active-color", activeColor);
+      projectShowcase.style.setProperty("--project-active-soft", activeSoft);
+
+      projectNodes.forEach((item) => {
+        const isActive = item === node;
+        item.classList.toggle("is-active", isActive);
+        item.querySelector(".project-node-trigger")?.setAttribute("aria-pressed", String(isActive));
+      });
+
+      resultSets.forEach((set) => {
+        set.classList.toggle("is-active", set.dataset.resultProject === project);
+      });
+    };
+
+    projectNodes.forEach((node) => {
+      node.querySelector(".project-node-trigger")?.addEventListener("click", () => setActiveProject(node));
+    });
+  }
+
   const revealItems = Array.from(document.querySelectorAll(".reveal, .case-section, .case-story-block"));
 
   if (!("IntersectionObserver" in window)) {

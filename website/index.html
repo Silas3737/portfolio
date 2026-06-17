@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://silas3737.github.io/portfolio/assets/case-films-bond.jpg" />
   <link rel="canonical" href="https://silas3737.github.io/portfolio/" />
-  <link rel="stylesheet" href="home.css?v=20260617-20" />
+  <link rel="stylesheet" href="home.css?v=20260617-29" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳过导航</a>
@@ -65,56 +65,138 @@
               <a class="minor-link" href="#cases">查看全部案例 →</a>
             </div>
 
-            <div class="project-list" aria-label="代表案例">
-              <div class="project-list-head" aria-hidden="true">
-                <span class="col-no">编号</span>
-                <span>项目</span>
-                <span class="col-type">类型</span>
-                <span class="col-year">角色</span>
-                <span class="col-result">结果</span>
-              </div>
+            <div class="project-showcase" data-project-showcase>
+              <div class="project-map" aria-label="代表案例项目地图">
+                <span class="project-axis-y">体验提升</span>
+                <span class="project-axis-x">业务复杂度</span>
+                <span class="project-axis-arrow-y" aria-hidden="true"></span>
+                <span class="project-axis-arrow-x" aria-hidden="true"></span>
 
-              <a class="project-row" href="cases/films-bond.html" aria-label="查看影保宝制片管理系统案例详情">
-                <span class="col-no">01</span>
-                <span class="project-cell">
-                  <span class="thumb" aria-hidden="true"></span>
-                  <span class="project-copy">
-                    <span class="project-name">影保宝制片管理系统</span>
+                <article class="project-node is-active" data-project="films-bond" data-tone="green">
+                  <button class="project-node-trigger" type="button" aria-pressed="true" aria-label="查看影保宝制片系统优化的关键结果">
+                    <span class="project-orbit" aria-hidden="true"></span>
+                  </button>
+                  <span class="project-map-card">
+                    <span class="project-name">影保宝制片系统优化</span>
                     <span class="project-desc">把复杂影视制片流程转化为高效拍摄计划工具</span>
+                    <span class="project-card-footer">
+                      <span class="pill green">B 端工具</span>
+                      <a class="project-action" href="cases/films-bond.html">查看项目</a>
+                    </span>
                   </span>
-                </span>
-                <span class="col-type"><span class="pill green">B 端工具</span></span>
-                <span class="col-year year">交互设计师</span>
-                <span class="col-result result">拍摄计划制作效率提升 44%，首次创建从 10h 降至 5.6h。</span>
-              </a>
+                </article>
 
-              <a class="project-row" href="cases/lowcode.html" aria-label="查看矩阵低代码易学性提升案例详情">
-                <span class="col-no">02</span>
-                <span class="project-cell">
-                  <span class="thumb blue" aria-hidden="true"></span>
-                  <span class="project-copy">
-                    <span class="project-name">矩阵低代码易学性提升</span>
-                    <span class="project-desc">降低低代码平台学习成本，让业务人员更快完成应用搭建</span>
-                  </span>
-                </span>
-                <span class="col-type"><span class="pill blue">B 端工具</span></span>
-                <span class="col-year year">交互设计师</span>
-                <span class="col-result result">首次完成时间减少 5.2min，稳定完成时间减少 9.2min。</span>
-              </a>
-
-              <a class="project-row" href="cases/xingzhi.html" aria-label="查看行志 APP 改版案例详情">
-                <span class="col-no">03</span>
-                <span class="project-cell">
-                  <span class="thumb teal" aria-hidden="true"></span>
-                  <span class="project-copy">
+                <article class="project-node" data-project="xingzhi" data-tone="gold">
+                  <button class="project-node-trigger" type="button" aria-pressed="false" aria-label="查看行志 APP 改版的关键结果">
+                    <span class="project-orbit" aria-hidden="true"></span>
+                  </button>
+                  <span class="project-map-card">
                     <span class="project-name">行志 APP 改版</span>
                     <span class="project-desc">通过任务序列重构和信息分层提升任务创建效率</span>
+                    <span class="project-card-footer">
+                      <span class="pill gold">移动产品</span>
+                      <a class="project-action" href="cases/xingzhi.html">查看项目</a>
+                    </span>
                   </span>
-                </span>
-                <span class="col-type"><span class="pill gold">移动产品</span></span>
-                <span class="col-year year">交互设计师</span>
-                <span class="col-result result">创建任务用时减少 196.6s，操作步骤从 12 步降至 6 步。</span>
-              </a>
+                </article>
+
+                <article class="project-node" data-project="lowcode" data-tone="blue">
+                  <button class="project-node-trigger" type="button" aria-pressed="false" aria-label="查看低代码易学性提升的关键结果">
+                    <span class="project-orbit" aria-hidden="true"></span>
+                  </button>
+                  <span class="project-map-card">
+                    <span class="project-name">低代码易学性提升</span>
+                    <span class="project-desc">降低低代码平台学习成本，让业务人员更快完成应用搭建</span>
+                    <span class="project-card-footer">
+                      <span class="pill blue">B 端工具</span>
+                      <a class="project-action" href="cases/lowcode.html">查看项目</a>
+                    </span>
+                  </span>
+                </article>
+              </div>
+
+              <aside class="project-results" aria-live="polite">
+                <h3>关键结果</h3>
+                <div class="project-result-set is-active" data-result-project="films-bond">
+                  <div class="project-result-item">
+                    <span class="project-result-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M5 15l4-4 4 4 6-8" />
+                        <path d="M15 7h4v4" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>44%</strong>
+                      <span>拍摄计划制作效率提升</span>
+                    </span>
+                  </div>
+                  <div class="project-result-item">
+                    <span class="project-result-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M6 7h12" />
+                        <path d="M6 12h8" />
+                        <path d="M6 17h5" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>10h → 5.6h</strong>
+                      <span>首次创建时间降低</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="project-result-set" data-result-project="xingzhi">
+                  <div class="project-result-item">
+                    <span class="project-result-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M12 5v14" />
+                        <path d="M5 12h14" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>196.6s</strong>
+                      <span>创建任务用时减少</span>
+                    </span>
+                  </div>
+                  <div class="project-result-item">
+                    <span class="project-result-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M4 7h16" />
+                        <path d="M4 12h12" />
+                        <path d="M4 17h8" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>12 → 6</strong>
+                      <span>操作步骤压缩</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="project-result-set" data-result-project="lowcode">
+                  <div class="project-result-item">
+                    <span class="project-result-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M4 16l5-5 4 4 7-8" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>5.2min</strong>
+                      <span>首次完成时间减少</span>
+                    </span>
+                  </div>
+                  <div class="project-result-item">
+                    <span class="project-result-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M12 4v16" />
+                        <path d="M6 10l6-6 6 6" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>9.2min</strong>
+                      <span>稳定完成时间减少</span>
+                    </span>
+                  </div>
+                </div>
+              </aside>
             </div>
           </div>
         </div>
@@ -206,6 +288,6 @@
         </div>
       </section>
     </main>
-  <script src="site.js?v=20260617-20"></script>
+  <script src="site.js?v=20260617-29"></script>
 </body>
 </html>

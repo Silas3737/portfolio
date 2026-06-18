@@ -34,6 +34,13 @@ function assertFileReference(file, attr, value, errors) {
   referencedFiles.add(target);
 }
 
+function assertSrcsetReferences(file, value, errors) {
+  for (const candidate of value.split(",")) {
+    const source = candidate.trim().split(/\s+/)[0];
+    assertFileReference(file, "srcset reference", source, errors);
+  }
+}
+
 function assertHeadMetadata(file, source, errors) {
   const rel = path.relative(root, file);
 
@@ -96,6 +103,10 @@ for (const file of htmlFiles) {
 
   for (const match of source.matchAll(/\s(?:href|src)=["']([^"']+)["']/g)) {
     assertFileReference(file, "asset reference", match[1], errors);
+  }
+
+  for (const match of source.matchAll(/\ssrcset=["']([^"']+)["']/g)) {
+    assertSrcsetReferences(file, match[1], errors);
   }
 
   for (const match of source.matchAll(/(?:href|src)=["']([^"']+\.(?:css|js)(?:\?[^"']*)?)["']/g)) {

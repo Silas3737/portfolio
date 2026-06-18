@@ -12,7 +12,7 @@ const pages = [
   {
     source: "index.html",
     output: "index.html",
-    stylesheet: "styles/home.css",
+    stylesheet: "styles/home.bundle.css",
     title: "侯泽航作品集首页",
     description: "侯泽航交互设计师作品集，聚焦复杂业务场景中的信息架构、任务流程和产品体验效率提升。",
     ogTitle: "侯泽航作品集",
@@ -26,7 +26,7 @@ const pages = [
   {
     source: "about.html",
     output: "about.html",
-    stylesheet: "styles/case.css",
+    stylesheet: "styles/case.bundle.css",
     title: "关于侯泽航｜交互设计师作品集",
     description: "侯泽航的职业背景、核心能力和联系方式，聚焦复杂业务场景中的产品体验效率提升。",
     ogTitle: "关于侯泽航",
@@ -39,7 +39,7 @@ const pages = [
   {
     source: "cases/films-bond.html",
     output: "cases/films-bond.html",
-    stylesheet: "../styles/case.css",
+    stylesheet: "../styles/case.bundle.css",
     title: "影保宝制片管理系统｜侯泽航作品集",
     description: "影保宝制片管理系统案例详情，说明复杂影视制片流程数字化和拍摄计划制作效率提升。",
     ogTitle: "影保宝制片管理系统｜侯泽航作品集",
@@ -53,7 +53,7 @@ const pages = [
   {
     source: "cases/lowcode.html",
     output: "cases/lowcode.html",
-    stylesheet: "../styles/case.css",
+    stylesheet: "../styles/case.bundle.css",
     title: "矩阵低代码平台易学性提升｜侯泽航作品集",
     description: "矩阵低代码平台易学性提升案例详情，说明复杂 B 端工具的学习路径、上下文提示和操作路径优化。",
     ogTitle: "矩阵低代码平台易学性提升｜侯泽航作品集",
@@ -67,7 +67,7 @@ const pages = [
   {
     source: "cases/xingzhi.html",
     output: "cases/xingzhi.html",
-    stylesheet: "../styles/case.css",
+    stylesheet: "../styles/case.bundle.css",
     title: "行志 APP 改版｜侯泽航作品集",
     description: "行志 APP 改版案例详情，说明任务管理产品的体验诊断、流程重构和任务创建效率提升。",
     ogTitle: "行志 APP 改版｜侯泽航作品集",

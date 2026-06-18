@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "generate": "node tools/build-site.mjs",
+    "generate": "node tools/build-css.mjs && node tools/build-site.mjs",
     "format": "node tools/format-site.mjs",
     "check:format": "node tools/format-site.mjs --check",
     "check:html": "node tools/validate-html.mjs",

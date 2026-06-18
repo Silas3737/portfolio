@@ -6,5 +6,5 @@
 - `about.html`：关于页
 - `cases/`：案例详情页
 - `assets/`：图片与 SVG 资源
-- `styles/`：CSS 样式文件
+- `styles/`：CSS 样式文件，页面加载 `*.bundle.css`，其余文件作为模块化源样式维护
 - `site.js`：首页交互脚本
